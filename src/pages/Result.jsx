@@ -51,7 +51,7 @@ const Result = () => {
     );
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/students/result", {
+      const response = await axios.post("https://mgvmserver.onrender.com/api/students/result", {
         rollNo,className
       });
 

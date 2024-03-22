@@ -17,7 +17,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/auth/login", { userName, password });
+      const response = await axios.post("https://mgvmserver.onrender.com/api/auth/login", { userName, password });
       const { token } = response.data;
       localStorage.setItem("token", token);
       setError("");

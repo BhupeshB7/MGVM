@@ -24,7 +24,7 @@ const ResultForm = () => {
     try {
       setError("");
       setLoading(true);
-      await axios.post("http://localhost:5000/api/students/create", formData);
+      await axios.post("https://mgvmserver.onrender.com/api/students/create", formData);
       // Reset form after successful submission
      
       setFormData({
