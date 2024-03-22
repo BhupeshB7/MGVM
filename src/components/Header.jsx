@@ -5,6 +5,7 @@ const Header = () => {
   const token = localStorage.getItem('token');
   const handleLogout =()=>{
     localStorage.removeItem('token');
+    navigate('/')
   }
   return (
     <div>

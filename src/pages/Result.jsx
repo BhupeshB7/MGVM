@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import sign from "../Assets/MGVM.jpg";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
+import Header from "../components/Header";
 const Result = () => {
   const [show, setShow] = useState(false);
   const [currentDateTime, setCurrentDateTime] = useState("");
@@ -107,7 +108,7 @@ grade="D"
   return (
     <div>
       <Background />
-
+    <Header/>
       <Container>
         <div className="result_box mt-5">
           <div className="box border-[1.2px]  rounded-md border-green-200 h-[400px]">
@@ -117,7 +118,7 @@ grade="D"
                 <div className="form_input">
                   <label>Roll No:</label>
                   <input
-                    type="text"
+                    type="number"
                     value={rollNo}
                     onChange={(e) => setRollNo(e.target.value)}
                     required
@@ -183,11 +184,11 @@ grade="D"
             id="modalContent"
           >
             <div className="schoolName block border border-green-500">
-              <p>Residential Maa Gayatri Vidya Mandir</p>
+              <p className="pt-2">Residential Maa Gayatri Vidya Mandir</p>
               <p>Sahorbaghat, K.asthan Darbhanga</p>
             </div>
             <div className="resultName border border-green-500 m-1">
-              <p style={{ paddingLeft: "10px" }}>
+              <p className="pt-2" style={{ paddingLeft: "10px" }}>
                 Name: &nbsp;&nbsp;&nbsp;&nbsp; {result.name}
               </p>
             </div>
