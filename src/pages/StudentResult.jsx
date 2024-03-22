@@ -12,18 +12,14 @@ const LoadingSpinner = () => (
     </Spinner>
   </div>
 );
-const StudentResult = ({token}) => {
+const StudentResult = () => {
   const navigate = useNavigate();
   const [students, setStudents] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  useEffect(()=>{
-    if(!token){
-      navigate('/login');
-    }
-  },[])
+ 
   useEffect(() => {
     const fetchStudents = async () => {
       setLoading(true);
